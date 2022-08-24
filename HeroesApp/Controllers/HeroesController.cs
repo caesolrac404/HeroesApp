@@ -1,5 +1,4 @@
-﻿using HeroesApp.Data.Models;
-using HeroesApp.Repository;
+﻿using HeroesApp.Repository;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HeroesApp.Controllers

@@ -5,14 +5,15 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">HEROES</h1>
+    <h1 class="display-4">MARVEL HEROES</h1>
 
     @foreach (var hero in Model)
     {
         <div class="card" style="width: 18rem;">
             <img src="@hero.Picture" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">@hero.Name.ToUpper()</h5>
+                <h4 class="card-title">@hero.Name.ToUpper()</h4>
+                <h6 class="card-subtitle">AGE: @hero.Age - CITY: @hero.City.ToUpper()</h6>
                 <p class="card-text">
                     @for(int i = 1; i <= 5; i++){
                         if(hero.Score >= (i-.25)){

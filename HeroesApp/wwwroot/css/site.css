@@ -42,3 +42,11 @@ body {
         min-height: 320px;
         max-height: 320px;
     }
+
+.btn-big {
+    font-size: 35px;
+}
+
+    .btn-big:hover {
+        background-color: #ED1D24;
+    }
