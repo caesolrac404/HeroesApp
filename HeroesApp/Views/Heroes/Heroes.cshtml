@@ -1,0 +1,54 @@
+﻿@using HeroesApp.Models.Dtos
+@model IEnumerable<HeroDto>
+@{
+    ViewData["Title"] = "Heroes list";
+}
+
+<div class="text-center">
+    <h1 class="display-4">HEROES</h1>
+
+    @foreach (var hero in Model)
+    {
+        <div class="card" style="width: 18rem;">
+            <img src="@hero.Picture" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">@hero.Name.ToUpper()</h5>
+                <p class="card-text">
+                    @for(int i = 1; i <= 5; i++){
+                        if(hero.Score >= (i-.25)){
+                            <i class="bi bi-star-fill"></i>
+                        }
+                        else if(hero.Score >= (i-.75)){
+                            <i class="bi bi-star-half"></i>
+                        }
+                        else{
+                            <i class="bi bi-star"></i>
+                        }
+                    }
+                </p>
+            </div>
+            <ul class="list-group list-group-flush">
+                @foreach (var rating in hero.Ratings.Take(5))
+                {
+                    <li class="list-group-item force-left">
+                        @rating.NameGrader @for (int i = 1; i <= 5; i++)
+                        {
+                            if (rating.Score >= (i - .25))
+                            {
+                                <i class="bi bi-star-fill"></i>
+                            }
+                            else if (rating.Score >= (i - .75))
+                            {
+                                <i class="bi bi-star-half"></i>
+                            }
+                            else
+                            {
+                                <i class="bi bi-star"></i>
+                            }
+                        }
+                    </li>
+                }
+            </ul>
+        </div>
+    }
+</div>

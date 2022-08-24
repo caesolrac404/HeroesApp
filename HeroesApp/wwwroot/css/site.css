@@ -1,0 +1,44 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.center-all {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.bi {
+    color: gold;
+}
+
+.force-left { 
+    text-align: left;
+}
+
+.card {
+    display: inline-flex;
+    margin-bottom: 20px;
+}
+
+    .card img {
+        min-height: 320px;
+        max-height: 320px;
+    }
